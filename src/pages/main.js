@@ -4,10 +4,10 @@ import interactionPlugin from '@fullcalendar/interaction';
 import koLocale from '@fullcalendar/core/locales/ko';
 import '../css/calendar.css';
 import {useState} from 'react';
-//mui
+//util imp
 import SpeedDial from '../util/speedDial';
 import AppBar from '../util/appBar';
-import Drawer from '../util/drawer';
+import BasicModal from '../util/modal';
 
 function Main() {
 
@@ -19,7 +19,6 @@ function Main() {
     console.log(AppBar.Box);
   return (
     <>
-    <Drawer />
     <AppBar />
     <div className='mainBox'>
     <div className='calendarBox'>

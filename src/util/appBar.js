@@ -6,27 +6,31 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import Drawer from '../util/drawer';
+import BasicModal from './modal';
+
 
 export default function ButtonAppBar() {
   return (
-    <Box sx={{ flexGrow: 1, marginBottom: '5%' }}>
+    <Box sx={{ flexGrow: 1, marginBottom: '1%' }}>
       <AppBar position="static"
       color={'secondary'}
       >
         <Toolbar>
           <IconButton
-            size="large"
+           className='menuBtn'
+            size="small"
             edge="start"
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <Drawer />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Calendar
           </Typography>
-          <Button color="inherit">Login</Button>
+          <BasicModal />
         </Toolbar>
       </AppBar>
     </Box>
