@@ -28,9 +28,5 @@ body,#root {
 }
 .fc .fc-daygrid-day.fc-day-today {
     background-color: rgb(255, 237, 146);
-    background-color: var(--fc-today-bg-color, rgb(255, 242, 180));
+    background-color: var(--fc-today-bg-color, rgb(255, 180, 199));
   }
-
-.menuBtn {
-    width: 4%;
-}

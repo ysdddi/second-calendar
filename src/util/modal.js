@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import LogIn from '../pages/login';
 
 // modal setting
 const style = {
@@ -12,7 +13,7 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 600,
   bgcolor: 'background.paper',
-  border: '1px solid  rgb(197, 0, 197)',
+  // border: '1px solid  rgb(197, 0, 197)',
   boxShadow: 24,
   p: 4,
 };
@@ -32,12 +33,7 @@ export default function BasicModal() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+          <LogIn />
         </Box>
       </Modal>
     </div>
