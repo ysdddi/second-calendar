@@ -13,6 +13,7 @@ import AlbumIcon from "@mui/icons-material/PhotoAlbum";
 import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
+import SettingsIcon from '@mui/icons-material/Settings';
 //
 import { Link , useNavigate} from "react-router-dom";
 import { Album } from "@mui/icons-material";
@@ -36,8 +37,9 @@ export default function TemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
    const navigate = useNavigate();
-   const linkOnClick = (url) => {
-     navigate(`/${url}`)}
+  //  const linkOnClick = (url) => {
+  //    navigate(`/${url}`)}
+  // onClick={index === 0 ? linkOnClick('') : linkOnClick('album')}
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
@@ -48,7 +50,7 @@ export default function TemporaryDrawer() {
       <List>
         {["Calendar", "Album"].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton onClick={index === 0 ? linkOnClick('') : linkOnClick('album')}>
+            <ListItemButton onClick={navigate('calendar')} >
               <ListItemIcon>{index===0 ? <CalendarIcon /> : <AlbumIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -57,11 +59,11 @@ export default function TemporaryDrawer() {
       </List>
       <Divider />
       <List>
-        {["All mail", "Trash"].map((text, index) => (
+        {["Settings"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <SettingsIcon />
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>

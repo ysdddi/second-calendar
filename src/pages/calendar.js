@@ -32,7 +32,6 @@ function Calendar() {
            center: 'title',
            end: 'today'
        }}
-       eventLimit={true}
        aspectRatio={1.8}
        events={[
         {start:'2022-05-31',
